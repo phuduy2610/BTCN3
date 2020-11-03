@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>BE TAP TINH</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="/stylesheets/bootstrap.css.map" rel="stylesheet">
+	<script src="/javascripts/check.js"></script>
+</head>
+
+<body onload="checkradio('{{cal}}','{{result}}')">
+	<h1>Bé tập tính</h1>
+	<p><br /> </p>
+	<form method="post" onsubmit="connect()">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-sm-1">
+					<p>Số thứ nhất</p>
+				</div>
+				<div class="col-sm-2">
+						<input type="text" name="firstnum" id="sodau" value="{{firstnumber}}" >
+				</div>
+				<div class="col-sm-1">
+					<label id="radiolabelcong">Cộng
+						<input type="radio" name="radiocal" class="radiobutton1" id="radiocong" 
+						value="cong">
+					</label>
+				</div>
+				<div class="col-sm-1">
+					<label id="radiolabelcong">Trừ
+						<input type="radio" name="radiocal" class="radiobutton1" id="radiotru"
+						value="tru">
+					</label>
+				</div>
+			</div>
+			<div class="row no-gutters">
+				<div class="col-sm-1">
+					<p>Số thứ hai</p>
+				</div>
+				<div class="col-sm-2">
+						<input type="text" name="secondnum" id="sosau" value="{{secondnumber}}">
+				</div>
+				<div class="col-sm-1">
+					<label id="radiolabelcong">Nhân
+						<input type="radio" name="radiocal" class="radiobutton1" id="radionhan"
+						 value="nhan">
+					</label>
+				</div>
+				<div class="col-sm-1">
+					<label id="radiolabelcong">Chia
+						<input type="radio" name="radiocal" class="radiobutton1" id="radiochia"
+						value="chia">
+					</label>
+				</div>
+			</div>
+			<div class="row no-gutters">
+				<div class="col-sm-1">
+					<p>Kết quả</p>
+				</div>
+				<div class="col-sm-2">
+						<input type="text" id="result"  name="result" value="{{result}}" disabled>
+				</div>
+				<input type="submit" value="Tính" id="buttoncal" >
+			</div>
+			<div class="row no-gutters">
+				<div class="col-sm-1">
+					<p>Thông báo</p>
+				</div>
+				<div class="col-sm-4">
+					<p id="announce" name="announce" ></p>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
